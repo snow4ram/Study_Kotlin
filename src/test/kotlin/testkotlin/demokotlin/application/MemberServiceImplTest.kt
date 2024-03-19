@@ -2,19 +2,21 @@ package testkotlin.demokotlin.application
 
 import org.assertj.core.api.Assertions
 import org.junit.jupiter.api.Test
+import testkotlin.demokotlin.app.request.MemberRequest
 
 internal class MemberServiceImplTest {
 
     private var service = MemberServiceImpl()
 
+    private var name = "userA"
+    private var age = 10
     @Test
     fun save() {
         //give
-        var name = "userA"
-        var age = 10
+        val memberRequest = MemberRequest(name, age)
 
         //when
-        service.save(name, age)
+        service.save(memberRequest)
 
         //then
         val members = service.get(1L)

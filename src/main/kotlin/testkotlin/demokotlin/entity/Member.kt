@@ -4,8 +4,8 @@ import lombok.Getter
 
 
 class Member(
-        var name: String,
-        var age: Int) {
+        val name: String,
+        val age: Int) {
 
     override fun toString(): String {
         return "Member(name='$name', age=$age)"
