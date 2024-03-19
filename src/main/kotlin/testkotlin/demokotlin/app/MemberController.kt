@@ -17,7 +17,7 @@ import testkotlin.demokotlin.application.MemberService
 class MemberController (private var memberService: MemberService) {
 
     @PostMapping("/save")
-    public fun save(@RequestBody memberRequest: MemberRequest):MemberResponse? {
+    fun save(@RequestBody memberRequest: MemberRequest):MemberResponse? {
         return memberService.save(memberRequest)
     }
 
