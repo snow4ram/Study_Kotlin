@@ -4,7 +4,7 @@ import org.springframework.stereotype.Service
 import testkotlin.demokotlin.entity.Member
 
 @Service
-class MemberServiceImpl () :MemberService {
+class MemberServiceImpl : MemberService {
 
     private var school: MutableMap<Long, Member> = mutableMapOf()
 
